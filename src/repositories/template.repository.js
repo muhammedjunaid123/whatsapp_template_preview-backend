@@ -18,7 +18,6 @@ const get_template_repo = (id) => {
   return template_model.findById({ _id: id });
 };
 const update_template_repo = (data) => {
-
   const { title, description, footer, Variables, buttons, _id } = data;
   return template_model.findByIdAndUpdate(
     { _id: _id },
