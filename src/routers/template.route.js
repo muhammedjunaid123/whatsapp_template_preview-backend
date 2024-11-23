@@ -92,7 +92,7 @@ route.route('/create').post(create_template)
 
 /**
  * @swagger
- * /template:
+ * /template/getAll:
  *   get:
  *     summary: Retrieve all message templates
  *     description: Fetch all message templates from the database.

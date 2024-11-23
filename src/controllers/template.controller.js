@@ -10,6 +10,9 @@ import { apiResponse } from "../utils/apiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 
 const create_template = asyncHandler(async (req, res) => {
+  if (!req.body?.description || req.body.description.trim() == "") {
+    throw new apiError(400, "Invalid input data");
+  }
   const template = await create_template_repo(req.body);
   if (template) {
     res.json(new apiResponse(201, [], "message template created successfully"));
@@ -30,9 +33,13 @@ const get_template = asyncHandler(async (req, res) => {
   res.json(new apiResponse(200, data));
 });
 const update_template = asyncHandler(async (req, res) => {
+  if (!req.body?.description || req.body.description.trim() == "") {
+    throw new apiError(400, "Invalid request body");
+  }
   if (!mongoose.Types.ObjectId.isValid(req.body._id)) {
     throw new apiError(400, "Invalid request body");
   }
+ 
   const data = await update_template_repo(req.body);
   if (!data) {
     throw new apiError(404, "Template not found");

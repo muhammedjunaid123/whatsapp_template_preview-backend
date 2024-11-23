@@ -1,7 +1,9 @@
 import template_model from "../models/template.model.js";
 
+
 const create_template_repo = (data) => {
   const { title, description, footer, Variables, buttons } = data;
+ 
   const template = new template_model({
     title: title,
     description: description,
