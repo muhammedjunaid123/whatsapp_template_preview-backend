@@ -31,7 +31,7 @@ he WhatsApp Template Creator App empowers users to design, edit, and manage cust
 1. **Clone the repository**
    ```bash
    git clone [<repository-url>](https://github.com/muhammedjunaid123/whatsapp_template_preview-backend.git)
-   cd Nalanda-_Library_Management_System
+   cd whatsapp_template_preview-backend
    npm install
 
 # Running the Application
