@@ -40,7 +40,7 @@ To run the application, use the appropriate command based on your needs:
 
 - **Development Mode**: `npm run start`
 - **Watch Mode**: `npm run dev`
-- - **test**: `npm test`
+- **test**: `npm test`
 
 ## Contact
 
